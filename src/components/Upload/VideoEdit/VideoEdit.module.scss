@@ -1,0 +1,170 @@
+.video-edit-header-title {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--black);
+  display: block;
+}
+
+.video-edit-header-text {
+  color: rgba(22, 24, 35, 0.5);
+}
+
+.video-edit-main {
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 130px;
+}
+
+// ----------------------------------------------------------------
+
+.video-edit-info {
+  margin-left: 24px;
+  flex: 1 1 0%;
+  min-width: 0px;
+}
+
+.video-edit-title {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.justify-start {
+    justify-content: flex-start;
+  }
+}
+
+.video-caption {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption-length-counter {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgba(22, 24, 35, 0.5);
+  float: right;
+}
+
+.video-caption-input {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 18px;
+  cursor: text;
+  width: 100%;
+  position: relative;
+  padding: 10px 16px;
+  margin-top: 4px;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  border-radius: 4px;
+}
+
+.video-cover {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.video-category,
+.video-watcher-restrict {
+  margin-top: 24px;
+}
+
+.video-category-input,
+.watch-restrict-input {
+  width: 300px;
+  height: 36px;
+  padding: 6px 10px;
+  margin-top: 4px;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  background: rgb(255, 255, 255);
+  outline: none;
+}
+
+.video-action-restrict {
+  margin-top: 24px;
+}
+
+.action-restrict-item-container {
+  display: flex;
+}
+
+.action-restrict-item {
+  margin-right: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.action-restrict-label {
+  margin-left: 8px;
+}
+
+.video-schedule {
+  margin-top: 24px;
+}
+
+.video-schedule-toggle-btn {
+  margin-left: 16px;
+}
+
+.video-schedule-input-container {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.video-schedule-input {
+  font-family: 'TikTokFont';
+  height: 32px;
+  background: rgba(46, 50, 56, 0.05);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  line-height: 32px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: rgb(22, 24, 35);
+  margin-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  align-items: center;
+  cursor: pointer;
+  animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.video-edit-confirm {
+  // margin-top: 24px;
+  margin-top: 48px;
+}
+
+.discard-btn {
+  width: 164px;
+  height: 48px;
+  font-weight: 400;
+  color: var(--black);
+  border-color: rgba(22, 24, 35, 0.12);
+
+  &:hover {
+    background-color: rgba(245, 245, 245, 1);
+    border-color: rgba(22, 24, 35, 0.12);
+  }
+}
+
+.post-btn {
+  width: 164px;
+  height: 48px;
+  font-weight: 400;
+}

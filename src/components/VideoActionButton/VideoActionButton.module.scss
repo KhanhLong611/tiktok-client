@@ -1,0 +1,50 @@
+.video-action-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(22, 24, 35, 0.06);
+  margin-bottom: 5px;
+  font-size: 2.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.noIcon {
+    &:active {
+      background-color: rgba(22, 24, 35, 0.15);
+    }
+  }
+
+  &.small {
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(0.85);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.video-action-btn {
+  animation: clickEffect 0.6s linear;
+}

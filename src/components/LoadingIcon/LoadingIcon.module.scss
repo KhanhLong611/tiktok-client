@@ -1,0 +1,77 @@
+.loading-icon-container {
+  margin: 0 auto;
+  height: 60px;
+}
+
+.default-load {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.feed-first-load {
+  margin-left: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.browser-first-load {
+  position: relative;
+  top: calc(45vh);
+  left: calc(45vw);
+}
+
+.comment-first-load {
+  position: relative;
+  left: 180px;
+}
+
+.loading-dot-container {
+  position: relative;
+  height: 60px;
+  max-width: 100px;
+}
+
+.loading-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 5px;
+  position: absolute;
+}
+
+.loading-dot.red {
+  background-color: rgba(245, 9, 9, 0.85);
+  left: calc(50% - 5px);
+  animation: moveRight 1s infinite linear;
+}
+
+.loading-dot.blue {
+  background-color: rgba(69, 170, 216, 0.85);
+  left: calc(50% + 5px);
+  animation: moveLeft 1s infinite linear;
+}
+
+@keyframes moveLeft {
+  0%,
+  100% {
+    left: calc(50%);
+  }
+  50% {
+    left: calc(50% + 8px);
+  }
+}
+
+@keyframes moveRight {
+  0%,
+  100% {
+    left: calc(50%);
+  }
+  50% {
+    left: calc(50% - 8px);
+  }
+}

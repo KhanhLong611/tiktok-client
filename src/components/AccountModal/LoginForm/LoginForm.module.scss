@@ -1,0 +1,129 @@
+form {
+  height: 100%;
+}
+
+.form-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-main {
+  width: 375px;
+  margin: 0 auto;
+  padding: unset;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-title {
+  font-size: 3.2rem;
+  margin: 16px auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.input-name {
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  margin-bottom: 9px;
+
+  border-radius: 2px;
+  background-color: rgba(22, 24, 35, 0.06);
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  padding-left: 12px;
+  color: rgb(22, 24, 35);
+  line-height: 100%;
+  outline: none;
+  font-size: 1.6rem;
+  height: 44px;
+  caret-color: rgb(254, 44, 85);
+  width: 100%;
+}
+
+.form-error {
+  font-size: 1.2rem;
+  line-height: 15px;
+  margin: 4px 0px;
+  color: rgb(255, 76, 58);
+  display: flex;
+}
+
+.form-main-link {
+  color: rgba(22, 24, 35, 1);
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-block;
+  text-align: start;
+
+  &:hover {
+    text-decoration: underline rgba(22, 24, 35, 0.75);
+    cursor: pointer;
+  }
+}
+
+.submit-btn {
+  border-radius: 4px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(254, 44, 85);
+  min-width: 120px;
+  min-height: 46px;
+  font-size: 1.6rem;
+  line-height: 22px;
+  font-weight: 700;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 21px;
+
+  &:disabled {
+    border: none;
+    color: rgba(22, 24, 35, 0.34);
+    background-color: rgba(22, 24, 35, 0.06);
+    pointer-events: none;
+  }
+}
+
+.form-footer {
+  color: rgb(22, 24, 35);
+  font-family: TikTokFont;
+  height: 64px;
+  border-top: 0.5px solid rgba(22, 24, 35, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 18px;
+}
+
+.form-footer-text {
+  font-size: 1.5rem;
+  line-height: 18px;
+}
+
+.form-footer-link {
+  margin-left: 5px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 18px;
+  color: rgb(254, 44, 85);
+
+  &:hover {
+    text-decoration: underline rgb(254, 44, 85);
+    cursor: pointer;
+  }
+}

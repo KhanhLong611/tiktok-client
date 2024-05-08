@@ -1,0 +1,246 @@
+.inbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 376px;
+  /* height: 640px; */
+  overflow: hidden;
+}
+
+.inbox-header-container {
+  padding: 16px 0 0 16px;
+  margin-bottom: 6px;
+}
+
+.header-title {
+  margin-bottom: 12px;
+}
+
+.header-category {
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+
+.header-category-btn {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  padding: 4px 6px;
+  margin-right: 8px;
+  border: none;
+  background-color: rgba(22, 24, 35, 0.06);
+  justify-content: center;
+  transition: all ease 0.3s;
+
+  + .header-category-btn {
+    margin-left: 0px;
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+
+  &.active {
+    color: white;
+    background-color: rgb(22, 24, 35);
+  }
+}
+
+.inbox-body-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+.follow-req-container {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  width: 100%;
+  padding: 16px 16px 16px 16px;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.follow-req-hint {
+  width: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.follow-req-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: rgb(254, 44, 85);
+}
+
+.follow-req-number,
+.follow-req-arrow {
+  font-size: 1.3rem;
+  color: rgba(22, 24, 35, 0.5);
+}
+
+.inbox-group-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inbox-time-title {
+  color: rgba(22, 24, 35, 0.5);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding: 0px 16px;
+}
+
+.inbox-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inbox-item {
+  padding: 8px 8px 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.inbox-item-avatar,
+.follow-req-item-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.inbox-item-content {
+  padding: 0 12px;
+}
+
+.inbox-item-user,
+.follow-req-item-user {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-weight: 600;
+  word-break: break-all;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.inbox-item-action {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-weight: 400;
+  word-break: break-all;
+}
+
+.inbox-item-date,
+.follow-req-item-nickname {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: rgb(22, 24, 35, 0.5);
+}
+
+.inbox-item-date {
+  margin-left: 6px;
+}
+
+.inbox-item-thumbnail {
+  width: 42px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.follow-req-heading {
+  font-size: 1.4rem;
+  font-weight: 1.8rem;
+  color: rgb(22, 24, 35);
+  padding: 16px 16px 16px 16px;
+  min-width: 30%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.follow-req-back-icon {
+  margin-right: 6px;
+}
+
+.follow-req-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.follow-req-item {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.follow-req-item-detail {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+}
+
+.follow-req-item-avatar {
+  margin-right: 10px;
+}
+
+.follow-req-item-delete,
+.follow-req-item-accept {
+  font-size: 1.4rem;
+  font-weight: 400;
+  justify-content: center;
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  padding: 6px 8px;
+}
+
+.follow-req-item-delete:hover {
+  background-color: rgba(22, 24, 35, 0.03);
+}
+
+.follow-req-item-accept {
+  color: var(--white);
+  background-color: var(--primary);
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+  }
+}

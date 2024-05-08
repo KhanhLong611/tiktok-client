@@ -1,0 +1,22 @@
+.footer-item-container {
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.footer-item {
+  margin: 0 3px;
+  color: rgba(22, 24, 35, 0.5);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &[data-theme='dark'] {
+    color: var(--white);
+  }
+}

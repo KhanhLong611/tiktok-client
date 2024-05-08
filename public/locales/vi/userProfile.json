@@ -1,0 +1,18 @@
+{
+  "share": "Chia sẻ",
+  "more": "Thêm",
+  "messages": "Nhắn tin",
+  "follow": "Theo dõi",
+  "unfollow": "Bỏ theo dõi",
+  "edit": "Sửa hồ sơ",
+  "following": "Đang theo dõi",
+  "followers": "Người theo dõi",
+  "likesCount": "Lượt thích",
+  "videos": "Video",
+  "favorites": "Đã lưu",
+  "likes": "Đã thích",
+  "noVideoMessage": "Người dùng này chưa đăng video nào.",
+  "noFavoritesMessage": "Người dùng này chưa lưu video nào.",
+  "noLikeMessage": "Người dùng này chưa thích video nào.",
+  "noMoreVideoMessage": "Hết rồi!"
+}

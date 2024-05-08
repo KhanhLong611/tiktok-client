@@ -1,0 +1,63 @@
+.upload-btn {
+  height: 458px;
+  border: 2px dashed rgba(22, 24, 35, 0.12);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out 0s;
+  padding: 64px 50px;
+
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.upload-btn {
+  color: rgba(22, 24, 35, 0.75);
+  font-size: 1.4rem;
+}
+
+.upload-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.upload-icon {
+  color: rgba(22, 24, 35, 0.34);
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upload-main-text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.upload-sub-text {
+  margin: 6px 0 10px 0;
+}
+
+.upload-requirement-text {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.select-file-btn {
+  margin-top: 26px;
+  width: 360px;
+}

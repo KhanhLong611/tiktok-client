@@ -1,0 +1,45 @@
+{
+  "login": "Log In",
+  "upload": "Upload",
+  "search": { "searchPlaceholder": "Search accounts and videos", "searchTitle": "Accounts" },
+  "uploadBtn": "Upload",
+  "desktopBtn": "Desktop app",
+  "messageBtn": "Messages",
+  "inboxBtn": "Inbox",
+  "inbox": {
+    "inboxHeader": "Notifications",
+    "inboxTitle": {
+      "all": "All activities",
+      "likes": "Likes",
+      "comments": "Comments",
+      "mentionAndTags": "Mention and tags",
+      "followers": "Followers"
+    },
+    "followReq": {
+      "followReqTitle": "Follow requests",
+      "followReqDelete": "Delete",
+      "followReqAccept": "Accept",
+      "followReqBack": "Back"
+    },
+    "inboxTimestamp": "This week",
+    "inboxItemContent": "mention you in a comment: vui ghe"
+  },
+  "menuItems": {
+    "profile": "View Profile",
+    "favorites": "Favorites",
+    "live": "LIVE Creator Hub",
+    "coins": "Get Coins",
+    "settings": "Settings",
+    "language": {
+      "languageTitle": "Language",
+      "languageItem": {
+        "en": "English",
+        "vi": "Vietnamese"
+      }
+    },
+    "feedback": "Feedback and help",
+    "keyboard": "Keyboard shortcuts",
+    "darkMode": "Dark mode",
+    "logout": "Log out"
+  }
+}

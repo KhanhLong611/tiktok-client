@@ -1,0 +1,80 @@
+.wrapper {
+  border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.label {
+  padding: 10px 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: all ease-in 0.25s;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.item-info {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.nickname {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  line-height: 1.1;
+}
+
+.check {
+  margin-left: 4px;
+  font-size: 1.4rem;
+  color: #20d5ec;
+}
+
+.username {
+  font-size: 1.2rem;
+  color: #161823bf;
+
+  &[data-theme='dark'] {
+    color: var(--white);
+  }
+}
+
+.more-btn {
+  padding: 10px 8px 12px 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fe2c55;
+  cursor: pointer;
+}
+
+.no-following-text {
+  padding: 8px;
+  margin: 0px;
+  color: rgba(22, 24, 35, 0.5);
+  font-size: 1.6rem;
+  line-height: 21px;
+}
+
+.no-user-text {
+  padding: 20px 8px 24px;
+  margin: 0px;
+  color: rgba(22, 24, 35, 0.5);
+  font-size: 1.6rem;
+  line-height: 21px;
+}

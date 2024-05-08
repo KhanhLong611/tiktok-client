@@ -1,0 +1,41 @@
+{
+  "uploadBtn": {
+    "title": "Chọn video để đăng",
+    "description": {
+      "1": "Video dài có thể được chia làm nhiều đoạn để tăng khả năng tương tác",
+      "2": "MP4 hoặc WebM",
+      "3": "Độ phân giải 720x1280 hoặc cao hơn",
+      "4": "Thời lượng không quá 30 phút",
+      "5": "Nhỏ hơn 2GB"
+    },
+    "select": "Chọn tệp tin",
+    "allowSizeWarning": "Video được chọn vượt quá dung lượng cho phép 2GB."
+  },
+  "videoEdit": {
+    "title": "Tải video lên",
+    "description": "Đăng video vào tài khoản của bạn",
+    "caption": "Chú thích",
+    "cover": "Ảnh bìa",
+    "category": "Thể loại",
+    "categoryOptions": {
+      "dancing": "Nhảy múa",
+      "comedy": "Hài hước",
+      "sports": "Thể thao",
+      "anime": "Anime",
+      "shows": "Trình diễn",
+      "dailyLife": "Cuộc sống",
+      "beauty": "Làm đẹp",
+      "games": "Games",
+      "cars": "Xe",
+      "food": "Đồ ăn",
+      "animal": "Động vật",
+      "fitness": "Tập luyện"
+    },
+    "discard": "Hủy",
+    "post": "Đăng",
+    "noCaptionWarning": "Mỗi video đều cần có chú thích!",
+    "uploadSuccess": "Đăng video thành công! Điều hướng tới trang video.",
+    "discardWarning": "Bọn có chắc chắn muốn hủy bỏ video này?",
+    "discardSuccess": "Quá trình đăng video bị hủy bỏ. Hãy chọn một video khác để đăng lại."
+  }
+}

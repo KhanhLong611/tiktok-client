@@ -1,0 +1,32 @@
+{
+  "menuItems": {
+    "forYou": "For You",
+    "following": "Following",
+    "explore": "Explore",
+    "live": "LIVE"
+  },
+  "suggested": {
+    "label": {
+      "following": "Following accounts"
+    },
+    "noFollowingMessage": "You haven't followed anyone. Follow other users to see their accounts."
+  },
+  "footer": {
+    "about": "About",
+    "newsroom": "Newsroom",
+    "contact": "Contact",
+    "careers": "Careers",
+    "good": "Tiktok for Good",
+    "advertise": "Advertise",
+    "developers": "Developers",
+    "transparency": "Transparency",
+    "rewards": "Tiktok Rewards",
+    "embeds": "Tiktok Embeds",
+    "help": "Help",
+    "safety": "Safety",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "creatorPortal": "Creator Portal",
+    "communityGuidelines": "Community Guidelines"
+  }
+}

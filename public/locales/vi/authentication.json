@@ -1,0 +1,18 @@
+{
+  "login": "Đăng nhập",
+  "signup": "Đăng ký",
+  "forgotPassword": "Quên mật khẩu",
+  "resetPassword": "Đặt lại mật khẩu",
+  "email": "Email",
+  "emailAddress": "Địa chỉ email",
+  "enterEmail": "Nhập địa chỉ email",
+  "enterResetToken": "Nhập mã",
+  "sendResetToken": "Gửi mã",
+  "resetSuccessMessage": "Đặt lại mật khẩu thành công! Quay về trang chủ...",
+  "password": "Mật khẩu",
+  "passwordConfirm": "Xác nhận mật khẩu",
+  "noAccountMessage": "Không có tài khoản? ",
+  "haveAccountMessage": "Đã có tài khoản? ",
+  "createAccountSuccess": "Tạo tài khoản thành công. Quay về trang chủ...",
+  "policyText": "Bằng cách tiếp tục, bạn đồng ý với điều khoản và dịch vụ của TikTok và xác nhận đã đọc Chính sách quyền riêng tư TikTok \u00A9 2024 "
+}

@@ -1,0 +1,137 @@
+.video-player {
+  width: 65%;
+  min-width: 600px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-player-header {
+  width: calc(100% - 40px);
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  border: 1px solid black;
+}
+
+.video-player-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  filter: blur(24px) brightness(45%);
+  transform: scale(1.2);
+
+  &.landscape {
+    height: 100%;
+    transform: scale(2.6);
+  }
+}
+
+.video-player-main {
+  min-width: 400px;
+  width: 40%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+
+  video {
+    object-fit: cover;
+
+    &.landscape {
+      object-fit: contain;
+      background-color: black;
+    }
+  }
+}
+
+.video-main {
+  height: 100%;
+}
+
+.close-btn,
+.more-btn,
+.next-btn,
+.prev-btn,
+.mute-btn,
+.unmute-btn {
+  background-color: rgba(84, 84, 84, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(37, 37, 37, 0.6);
+  }
+}
+
+.navigation-control {
+  height: 92px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+// .prev-btn {
+//   display: none;
+// }
+
+.sound-control {
+  position: absolute;
+  right: 20px;
+  top: 92%;
+
+  &:hover {
+    .volume-bar {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
+
+.volume-bar {
+  width: 80px;
+  height: 2px;
+  // display: none;
+  opacity: 0;
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform-origin: top left;
+  rotate: -90deg;
+  transition: opacity 0.3s ease-in-out;
+  appearance: none;
+  background-color: rgba(211, 211, 211, 0.6);
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--white);
+    cursor: pointer;
+  }
+}

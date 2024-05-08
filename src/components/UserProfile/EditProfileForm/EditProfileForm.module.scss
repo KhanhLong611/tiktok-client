@@ -1,0 +1,267 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.3s ease, display 0.3s ease;
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.edit-profile-form {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  background: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+  border-radius: 8px;
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &.hide {
+    opacity: 0;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.edit-profile-form-header {
+  padding: 24px 24px 12px;
+  line-height: 36px;
+  border-bottom: 0.5px solid rgba(22, 24, 35, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header-title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: rgb(22, 24, 35);
+}
+
+.form-header-close-btn {
+  font-size: 2.2rem;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.edit-profile-form-body {
+  width: 700px;
+  padding: 8px 24px 0px;
+}
+
+.form-avatar {
+  padding: 16px 0px;
+  display: flex;
+  border-bottom: 0.5px solid rgba(22, 24, 35, 0.12);
+}
+
+.form-item-label {
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 1.6rem;
+  width: 120px;
+  margin-right: 24px;
+}
+
+.upload-label {
+  position: relative;
+  margin-left: 134px;
+}
+
+.user-avatar-container {
+  width: 96px;
+  height: 96px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.image-upload-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(208, 208, 211);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.form-description {
+  font-size: 12px;
+  color: rgba(22, 24, 35, 0.75);
+  line-height: 18px;
+  max-width: 460px;
+  overflow: hidden;
+  margin-top: 8px;
+  width: 360px;
+}
+
+// .user-page-url {
+//   font-size: 1.2rem;
+//   line-height: 18px;
+//   color: rgba(22, 24, 35, 0.75);
+//   margin-top: 16px;
+//   max-width: 460px;
+//   overflow: hidden;
+// }
+
+.form-warning {
+  height: 18px;
+  line-height: 18px;
+  color: rgb(255, 76, 58);
+  font-size: 1.2rem;
+  margin-top: 6px;
+}
+
+.form-username,
+.form-name,
+.form-bio {
+  padding: 16px 0px;
+  display: flex;
+  border-bottom: 0.5px solid rgba(22, 24, 35, 0.12);
+}
+
+.form-bio {
+  border-bottom: 0;
+}
+
+.username-input-container,
+.name-input-container,
+.bio-input-container {
+  flex: 1;
+  position: relative;
+}
+
+.username-input-box {
+  position: relative;
+  width: 360px;
+}
+
+.username-input,
+.name-input,
+.bio-input {
+  width: 360px;
+  height: 38px;
+  border-radius: 4px;
+  background: rgba(22, 24, 35, 0.06);
+  caret-color: rgb(254, 44, 85);
+  font-size: 1.6rem;
+  color: rgb(22, 24, 35);
+  line-height: 24px;
+  outline: none;
+  border: none;
+  padding: 7px 12px;
+  box-sizing: border-box;
+
+  &.not-valid {
+    outline: rgb(255, 76, 58) solid 1.5px;
+  }
+}
+
+.username-input {
+  padding-right: 40px;
+}
+
+.username-input-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.input-icon-spinner {
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bio-input {
+  height: 100px;
+  font-family: TikTokFont;
+  text-align: start;
+  padding: 12px;
+  resize: none;
+}
+
+.edit-profile-form-footer {
+  height: 86px;
+  padding: 0px 24px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 0.5px solid rgba(22, 24, 35, 0.2);
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
+.form-cancel-btn {
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  border-radius: 4px;
+  color: rgb(22, 24, 35);
+  background-color: rgb(255, 255, 255);
+  min-height: 28px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  user-select: none;
+  min-width: 96px;
+  height: 36px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgb(208, 209, 211);
+    background-color: rgb(248, 248, 248);
+  }
+}
+
+.form-submit-btn {
+  font-size: 1.4rem;
+  font-weight: 600;
+  user-select: none;
+  border: none;
+
+  &.disabled {
+    color: rgba(22, 24, 35, 0.34);
+    background-color: rgba(22, 24, 35, 0.06);
+    pointer-events: none;
+  }
+}

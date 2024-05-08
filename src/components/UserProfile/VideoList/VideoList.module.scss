@@ -1,0 +1,128 @@
+.user-videos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-menu-tab {
+  position: relative;
+
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+
+  height: 44px;
+  background-color: rgb(255, 255, 255);
+}
+
+.menu-tab-item {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 44px;
+  padding: 0px 32px;
+  text-align: center;
+  color: rgb(115, 116, 123);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  width: 180px;
+}
+
+.tab-item-name {
+  margin-left: 8px;
+}
+
+.menu-tab-item.active {
+  color: var(--black);
+  border-bottom: 2px solid black;
+}
+
+.menu-bottom-line {
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  background: rgba(22, 24, 35, 0.05);
+  bottom: 0px;
+}
+
+.creator-video-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: -12px;
+  margin-top: 0px;
+}
+
+.video-item {
+  width: 210px;
+  height: 280px;
+  margin-bottom: 36px;
+  position: relative;
+  padding: 12px;
+}
+
+.video-player {
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.video-caption-container {
+  height: 60px;
+}
+
+.video-caption {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.video-view-container {
+  color: var(--white);
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+}
+
+.video-view-icon {
+  font-size: 1.8rem;
+  margin-right: 6px;
+}
+
+.video-list-message {
+  margin-top: 8px;
+  margin-left: 12px;
+  font-size: 1.8rem;
+}
+
+.video-loader-container {
+  width: 100px;
+  position: relative;
+  left: 40%;
+}
+
+.no-more-text {
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  left: -30px;
+}
+
+.no-video {
+  display: none;
+}

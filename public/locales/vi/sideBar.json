@@ -1,0 +1,32 @@
+{
+  "menuItems": {
+    "forYou": "Dành cho bạn",
+    "following": "Đang theo dõi",
+    "explore": "Khám phá",
+    "live": "LIVE"
+  },
+  "suggested": {
+    "label": {
+      "following": "Tài khoản đang theo dõi"
+    },
+    "noFollowingMessage": "Bạn chưa theo dõi ai. Hãy theo dõi người khác để thấy tài khoản của họ."
+  },
+  "footer": {
+    "about": "Giới thiệu",
+    "newsroom": "Bảng tin",
+    "contact": "Liên hệ",
+    "careers": "Sự nghiệp",
+    "good": "Tiktok for Good",
+    "advertise": "Quảng cáo",
+    "developers": "Nhà phát triển",
+    "transparency": "Minh bạch",
+    "rewards": "Phần thưởng trên Tiktok",
+    "embeds": "Tiktok Embeds",
+    "help": "Trợ giúp",
+    "safety": "An toàn",
+    "terms": "Điều khoản",
+    "privacy": "Chính sách quyền riêng tư",
+    "creatorPortal": "Công cụ nhà sáng tạo",
+    "communityGuidelines": "Hướng dẫn Cộng đồng"
+  }
+}

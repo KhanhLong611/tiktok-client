@@ -1,0 +1,7 @@
+.wrapper {
+  height: calc(100vh - var(--default-layout-header-height));
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}

@@ -1,0 +1,104 @@
+@keyframes entrance {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes entranceBackdrop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes leaving {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+@keyframes leavingBackdrop {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+dialog {
+  width: 484px;
+  height: 568px;
+  padding-top: 48px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: entrance 210ms ease-in-out;
+  transform-origin: 0% 0%;
+
+  &.leave {
+    animation: leaving 210ms ease-in-out;
+  }
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: entranceBackdrop 210ms ease-in-out;
+}
+
+dialog.leave::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: leavingBackdrop 210ms ease-in-out;
+}
+
+.login-modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.login-modal-close {
+  transform: scale(1.7);
+  font-size: 1.4rem;
+  position: absolute;
+  top: -24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  z-index: 1;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background: rgba(22, 24, 35, 0.03);
+}
+
+.login-modal-form {
+  flex: 1;
+}

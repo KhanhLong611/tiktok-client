@@ -1,0 +1,45 @@
+{
+  "login": "Đăng nhập",
+  "upload": "Tải lên",
+  "search": { "searchPlaceholder": "Tìm kiếm", "searchTitle": "Tài khoản" },
+  "uploadBtn": "Tải lên",
+  "desktopBtn": "Ứng dụng cho máy tính",
+  "messageBtn": "Tin nhắn",
+  "inboxBtn": "Hộp thư",
+  "inbox": {
+    "inboxHeader": "Thông báo",
+    "inboxTitle": {
+      "all": "Tất cả hoạt động",
+      "likes": "Thích",
+      "comments": "Bình luận",
+      "mentionAndTags": "Lượt nhắc đến và lượt gắn thẻ",
+      "followers": "Người theo dõi"
+    },
+    "followReq": {
+      "followReqTitle": "Yêu cầu theo dõi",
+      "followReqDelete": "Xóa",
+      "followReqAccept": "Chấp nhận",
+      "followReqBack": "Quay lại"
+    },
+    "inboxTimestamp": "Tuần này",
+    "inboxItemContent": "đã nhắc đến bạn trong một bình luận: vui ghe"
+  },
+  "menuItems": {
+    "profile": "Xem hồ sơ",
+    "favorites": "Yêu thích",
+    "live": "Trung tâm nhà sáng tạo LIVE",
+    "coins": "Nhận Xu",
+    "settings": "Cài đặt",
+    "language": {
+      "languageTitle": "Ngôn ngữ",
+      "languageItem": {
+        "en": "Tiếng Anh",
+        "vi": "Tiếng Việt"
+      }
+    },
+    "feedback": "Phản hồi và trợ giúp",
+    "keyboard": "Phím tắt trên bàn phím",
+    "darkMode": "Chế độ tối",
+    "logout": "Đăng xuất"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "share": "Share",
+  "more": "More",
+  "messages": "Messages",
+  "follow": "Follow",
+  "unfollow": "Unfollow",
+  "edit": "Edit profile",
+  "following": "Following",
+  "followers": "Followers",
+  "likesCount": "Likes",
+  "videos": "Videos",
+  "favorites": "Favorites",
+  "likes": "Likes",
+  "noVideoMessage": "This user haven't posted any video yet.",
+  "noFavoritesMessage": "This user haven't saved any videos to favorite list yet.",
+  "noLikeMessage": "This user haven't liked any videos yet.",
+  "noMoreVideoMessage": "That's all!"
+}

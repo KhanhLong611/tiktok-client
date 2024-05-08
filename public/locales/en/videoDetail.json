@@ -1,0 +1,20 @@
+{
+  "sound": "original sound",
+  "actions": {
+    "embed": "Embed",
+    "sendToFriends": "Send to friends",
+    "facebook": "Share to Facebook",
+    "whatsapp": "Share to Whatsapp",
+    "twitter": "Share to Twitter",
+    "share": "Share"
+  },
+  "follow": "Follow",
+  "following": "Following",
+  "comments": "Comments",
+  "addComment": "Add Comment",
+  "postComment": "Post",
+  "reply": "Reply",
+  "report": "Report",
+  "delete": "Delete",
+  "creatorVideos": "Creator videos"
+}

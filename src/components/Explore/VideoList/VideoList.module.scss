@@ -1,0 +1,84 @@
+.video-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  margin: -8px -8px;
+  margin-top: 10px;
+}
+
+.video-item {
+  padding: 8px 8px;
+  width: 290px;
+  height: 490px;
+  position: relative;
+}
+
+.video-player {
+  object-fit: cover;
+  height: 384px;
+  border-radius: 6px;
+}
+
+.video-view-container {
+  position: absolute;
+  left: 20px;
+  bottom: 105px;
+  color: var(--white);
+}
+
+.video-view-counter {
+  margin-left: 6px;
+}
+
+.video-description-container {
+}
+
+.video-caption {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.video-info-container {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-user-container {
+  display: flex;
+  align-items: center;
+}
+
+.video-user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.video-user-nickname {
+  margin-left: 6px;
+  width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+}
+
+.video-like-container {
+  display: flex;
+  color: rgba(22, 24, 35, 0.6);
+  font-size: 1.65rem;
+}
+
+.video-like-icon {
+  margin-right: 6px;
+}

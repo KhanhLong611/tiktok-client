@@ -1,0 +1,10 @@
+.wrapper {
+  --search-width: 360px;
+  --search-border-radius: 92px;
+  --search-height: 46px;
+  --search-top-spacer: 9px;
+  --search-button-width: 52px;
+
+  display: flex;
+  overflow: hidden;
+}

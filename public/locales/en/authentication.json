@@ -1,0 +1,18 @@
+{
+  "login": "Log in",
+  "signup": "Sign up",
+  "forgotPassword": "Forgot password",
+  "resetPassword": "Reset password",
+  "email": "Email",
+  "emailAddress": "Email address",
+  "enterEmail": "Enter email address",
+  "enterResetToken": "Enter reset token",
+  "sendResetToken": "Send token",
+  "resetSuccessMessage": "Reset password successfully! Redirecting to home page...",
+  "password": "Password",
+  "passwordConfirm": "Password confirmation",
+  "noAccountMessage": "Don't have an account? ",
+  "haveAccountMessage": "Already have an account? ",
+  "createAccountSuccess": "Successfully created account. Redirecting to home page...",
+  "policyText": "By continuing, you agree to TikTok's Terms of Service and confirm that you have read TikTok's Privacy Policy \u00A9 2024 TikTok"
+}

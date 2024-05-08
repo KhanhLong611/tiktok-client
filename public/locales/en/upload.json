@@ -1,0 +1,41 @@
+{
+  "uploadBtn": {
+    "title": "Select video to upload",
+    "description": {
+      "1": "Long videos can be split into multiple parts to get more exposure",
+      "2": "MP4 or WebM",
+      "3": "720x1280 resolution or higher",
+      "4": "Up to 30 minutes",
+      "5": "Less than 2GB"
+    },
+    "select": "Select file",
+    "allowSizeWarning": "The selected video exceeds the maximum allowed size of 2GB."
+  },
+  "videoEdit": {
+    "title": "Upload video",
+    "description": "Post a video to your account",
+    "caption": "Caption",
+    "cover": "Cover",
+    "category": "Category",
+    "categoryOptions": {
+      "dancing": "Dancing",
+      "comedy": "Comedy",
+      "sports": "Sports",
+      "anime": "Anime",
+      "shows": "Shows",
+      "dailyLife": "Daily life",
+      "beauty": "Beauty",
+      "games": "Games",
+      "cars": "Cars",
+      "food": "Food",
+      "animal": "Animal",
+      "fitness": "Fitness"
+    },
+    "discard": "Discard",
+    "post": "Post",
+    "noCaptionWarning": "Every video needs a caption!",
+    "uploadSuccess": "Uploaded video successfully! Redirect to the video page.",
+    "discardWarning": "Are you sure you want to discard this video?",
+    "discardSuccess": "Video upload canceled. Select a video to upload again."
+  }
+}

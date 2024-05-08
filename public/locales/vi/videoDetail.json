@@ -1,0 +1,20 @@
+{
+  "sound": "âm thanh gốc",
+  "actions": {
+    "embed": "Nhúng",
+    "sendToFriends": "Chia sẻ cho bạn bè",
+    "facebook": "Chia sẻ lên Facebook",
+    "whatsapp": "Chia sẻ lên Whatsapp",
+    "twitter": "Chia sẻ lên Twitter",
+    "share": "Chia sẻ"
+  },
+  "follow": "Theo dõi",
+  "following": "Đang theo dõi",
+  "comments": "Bình luận",
+  "addComment": "Thêm bình luận",
+  "postComment": "Đăng",
+  "reply": "Phản hồi",
+  "report": "Báo cáo",
+  "delete": "Xóa",
+  "creatorVideos": "Video của nhà sáng tạo"
+}
