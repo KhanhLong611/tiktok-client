@@ -18,7 +18,9 @@ function CreatorVideos({ video }) {
     const fetchUserVideos = async () => {
       try {
         const fetchedVideos = (
-          await axios.get(`/api/v1/users/${video.user.id}/videos/?page=1&limit=5`)
+          await axios.get(
+            `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${video.user.id}/videos/?page=1&limit=5`,
+          )
         ).data.data.videos;
         setUserVideos(fetchedVideos);
         setIsLoading(false);

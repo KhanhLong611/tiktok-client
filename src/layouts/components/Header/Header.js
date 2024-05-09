@@ -165,7 +165,9 @@ function Header() {
         case 'logout':
           try {
             const loggingout = async () => {
-              await axios.get('/api/v1/users/logout', { withCredentials: true });
+              await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/logout`, {
+                withCredentials: true,
+              });
             };
             loggingout();
             dispatch(logout());

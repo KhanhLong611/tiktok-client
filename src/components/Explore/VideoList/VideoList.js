@@ -56,7 +56,9 @@ function VideoList({ category }) {
 
     let ignore;
     const fetchVideos = async () => {
-      const res = await axios.get(`/api/v1/explore?tag=${category.toLowerCase()}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/explore?tag=${category.toLowerCase()}`,
+      );
 
       const videos = res.data.data.videos;
       if (!ignore) {

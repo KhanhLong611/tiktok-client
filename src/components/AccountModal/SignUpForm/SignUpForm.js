@@ -45,7 +45,7 @@ function SignUpForm({ onLogInClick }) {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        '/api/v1/users/signup',
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/signup`,
         {
           email,
           password,

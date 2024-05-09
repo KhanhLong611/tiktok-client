@@ -32,9 +32,13 @@ function VideoFeed({ type }) {
   const fetchMoreVideos = useCallback(async () => {
     let moreVideos;
     if (type === 'random') {
-      moreVideos = (await axios.get(`/api/v1/random?page=${page + 1}`)).data.data?.videos;
+      moreVideos = (
+        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/random?page=${page + 1}`)
+      ).data.data?.videos;
     } else if (type === 'following') {
-      moreVideos = (await axios.get(`/api/v1/following?page=${page + 1}`)).data.data?.videos;
+      moreVideos = (
+        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/following?page=${page + 1}`)
+      ).data.data?.videos;
     }
     if (moreVideos && moreVideos.length > 0) {
       setVideos([...videos, ...moreVideos]);
@@ -97,9 +101,13 @@ function VideoFeed({ type }) {
       const currentUser = currentUserRef.current;
       // Fetch random or following videos based on the query parameter
       if (type === 'random') {
-        fetchedVideos = (await axios.get(`/api/v1/random?new=${fetchNew}`)).data.data.videos;
+        fetchedVideos = (
+          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/random?new=${fetchNew}`)
+        ).data.data.videos;
       } else if (type === 'following' && currentUser) {
-        fetchedVideos = (await axios.get(`/api/v1/following?page=1`)).data.data.videos;
+        fetchedVideos = (
+          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/following?page=1`)
+        ).data.data.videos;
       }
       if (!ignore && fetchedVideos?.length > 0) {
         setVideos(fetchedVideos);

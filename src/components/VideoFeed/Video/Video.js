@@ -41,38 +41,40 @@ function Video({ video, scrollState, from }) {
 
   const followUser = async () => {
     setIsFollowed(true);
-    await axios.patch(`/api/v1/users/follow/${video.user._id}`);
+    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/follow/${video.user._id}`);
     dispatch(followClick([video.user._id]));
   };
 
   const unfollowUser = async () => {
     setIsFollowed(false);
-    await axios.patch(`/api/v1/users/unfollow/${video.user._id}`);
+    await axios.patch(
+      `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unfollow/${video.user._id}`,
+    );
     dispatch(followClick([video.user._id]));
   };
 
   const likeVideo = async () => {
     setIsLiked(true);
     setNumLikes(numLikes + 1);
-    await axios.patch(`/api/v1/users/like/${video._id}`);
+    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/like/${video._id}`);
   };
 
   const unlikeVideo = async () => {
     setIsLiked(false);
     setNumLikes(numLikes - 1);
-    await axios.patch(`/api/v1/users/unlike/${video._id}`);
+    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unlike/${video._id}`);
   };
 
   const favoriteVideo = async () => {
     setIsFavorite(true);
     setNumFavorites(numFavorites + 1);
-    await axios.patch(`/api/v1/users/favorite/${video._id}`);
+    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/favorite/${video._id}`);
   };
 
   const notfavoriteVideo = async () => {
     setIsFavorite(false);
     setNumFavorites(numFavorites - 1);
-    await axios.patch(`/api/v1/users/notfavorite/${video._id}`);
+    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/notfavorite/${video._id}`);
   };
 
   const handleFollowClick = async () => {

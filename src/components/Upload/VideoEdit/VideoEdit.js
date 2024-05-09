@@ -133,7 +133,7 @@ function VideoEdit({ video }) {
           tag: category,
         };
 
-        const res = await axios.post('/api/v1/videos', data);
+        const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/v1/videos`, data);
 
         alert(`${t('videoEdit.uploadSuccess')}`);
         navigate(`/${currentUser.nickname}/video/${res.data.data.document._id}`);

@@ -108,7 +108,10 @@ function EditProfileForm({ closeEditProfileForm }) {
         updateData.avatar = imgUrl;
       }
 
-      const res = await axios.patch('/api/v1/users/updateMe', updateData);
+      const res = await axios.patch(
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/updateMe`,
+        updateData,
+      );
 
       const user = res.data.data.user;
       dispatch(updateUser(user));
@@ -174,7 +177,9 @@ function EditProfileForm({ closeEditProfileForm }) {
         } else {
           try {
             const response = await axios.get(
-              `/api/v1/users/checkNicknameDuplicate?nickname=${encodeURIComponent(
+              `${
+                process.env.REACT_APP_BACKEND_URL
+              }/api/v1/users/checkNicknameDuplicate?nickname=${encodeURIComponent(
                 trimmedNickname,
               )}`,
             );

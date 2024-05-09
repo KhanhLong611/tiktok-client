@@ -18,10 +18,10 @@ function AccountPreview({ data }) {
   const handleFollowClick = async () => {
     if (currentUser) {
       if (currentUser.following.includes(data._id)) {
-        await axios.patch(`/api/v1/users/unfollow/${data._id}`);
+        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unfollow/${data._id}`);
         dispatch(followClick([data._id]));
       } else {
-        await axios.patch(`/api/v1/users/follow/${data._id}`);
+        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/follow/${data._id}`);
         dispatch(followClick([data._id]));
       }
     } else {

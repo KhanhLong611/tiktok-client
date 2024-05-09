@@ -66,7 +66,7 @@ function ResetPasswordForm({ onSignUpClick }) {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        '/api/v1/users/forgotPassword',
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/forgotPassword`,
         {
           email,
         },

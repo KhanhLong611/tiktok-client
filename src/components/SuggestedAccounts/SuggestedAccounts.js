@@ -16,7 +16,9 @@ function SuggestedAccounts({ label }) {
   useEffect(() => {
     const fetchAccounts = async () => {
       if (currentUser) {
-        const fetchedAccounts = (await axios.get('/api/v1/users/following')).data.data.users;
+        const fetchedAccounts = (
+          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/following`)
+        ).data.data.users;
         if (fetchedAccounts.length > 0) {
           setAccounts(fetchedAccounts);
         } else {

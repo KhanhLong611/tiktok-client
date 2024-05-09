@@ -34,16 +34,22 @@ function VideoList({ user, isActive, handleMenuItemClick }) {
     if (user) {
       switch (isActive) {
         case 'videos':
-          URL = `/api/v1/users/${user._id}/videos/?page=${page + 1}&limit=10`;
+          URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${user._id}/videos/?page=${
+            page + 1
+          }&limit=10`;
           break;
         case 'favorites':
-          URL = `/api/v1/users/${user._id}/videos/favorites/?page=${page + 1}&limit=10`;
+          URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${
+            user._id
+          }/videos/favorites/?page=${page + 1}&limit=10`;
           break;
         case 'liked':
-          URL = `/api/v1/users/${user._id}/videos/liked/?page=${page + 1}&limit=10`;
+          URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${user._id}/videos/liked/?page=${
+            page + 1
+          }&limit=10`;
           break;
         default:
-          URL = `/api/v1/users/${user._id}/videos`;
+          URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${user._id}/videos`;
           break;
       }
     }
@@ -65,19 +71,19 @@ function VideoList({ user, isActive, handleMenuItemClick }) {
     if (user) {
       switch (isActive) {
         case 'videos':
-          URL = `/api/v1/users/${user._id}/videos/?page=1&limit=10`;
+          URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${user._id}/videos/?page=1&limit=10`;
           message = `${t('noVideoMessage')}`;
           break;
         case 'favorites':
-          URL = `/api/v1/users/${user._id}/videos/favorites/?page=1&limit=10`;
+          URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${user._id}/videos/favorites/?page=1&limit=10`;
           message = `${t('noFavoritesMessage')}`;
           break;
         case 'liked':
-          URL = `/api/v1/users/${user._id}/videos/liked/?page=1&limit=10`;
+          URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${user._id}/videos/liked/?page=1&limit=10`;
           message = `${t('noLikeMessage')}`;
           break;
         default:
-          URL = `/api/v1/users/${user._id}/videos`;
+          URL = `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${user._id}/videos`;
           message = `${t('noVideoMessage')}`;
           break;
       }

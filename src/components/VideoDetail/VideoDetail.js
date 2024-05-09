@@ -28,7 +28,9 @@ function VideoDetail() {
     let ignore = false;
     const fetchVideo = async () => {
       try {
-        const video = (await axios.get(`/api/v1/videos/find/${videoId}`)).data.data.document;
+        const video = (
+          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/videos/find/${videoId}`)
+        ).data.data.document;
         if (!ignore) {
           dispatch(fetchSuccess(video));
         }

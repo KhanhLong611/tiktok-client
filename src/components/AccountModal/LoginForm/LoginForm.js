@@ -34,7 +34,7 @@ function LoginForm({ onSignupClick, onForgotClick }) {
 
     try {
       const { data } = await axios.post(
-        '/api/v1/users/login',
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/login`,
         {
           email,
           password,
