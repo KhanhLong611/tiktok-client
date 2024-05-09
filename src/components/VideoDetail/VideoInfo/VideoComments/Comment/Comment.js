@@ -105,7 +105,9 @@ function Comment({ data, comments, setComments }) {
               interactive
               zIndex={2}
               placement="bottom"
-              render={data.user._id === currentUser._id ? renderDeleteComment : renderReportComment}
+              render={
+                data.user._id === currentUser?._id ? renderDeleteComment : renderReportComment
+              }
             >
               <div>
                 <FontAwesomeIcon icon={faEllipsis} />
