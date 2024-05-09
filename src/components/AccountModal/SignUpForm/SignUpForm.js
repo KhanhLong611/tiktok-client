@@ -63,62 +63,62 @@ function SignUpForm({ onLogInClick }) {
   };
 
   return (
-    <div className={cx('form-container')} method="POST" autoComplete="off">
-      <div className={cx('form-main')}>
-        <h2 className={cx('form-title')}>{t('signup')}</h2>
-        <div className={cx('input-name')}>{t('email')}</div>
-        <input
-          className={cx('input-field')}
-          type="email"
-          placeholder={t('emailAddress')}
-          name="email"
-          required
-          value={email}
-          onInput={handleEmailChange}
-          id="email"
-        />
-        <div className={cx('input-name')}>{t('password')}</div>
-
-        <input
-          className={cx('input-field')}
-          type="password"
-          placeholder={t('password')}
-          name="password"
-          required
-          minLength={8}
-          value={password}
-          onInput={handlePasswordChange}
-          id="password"
-        />
-        <input
-          className={cx('input-field')}
-          type="password"
-          placeholder={t('passwordConfirm')}
-          name="passwordConfirm"
-          required
-          minLength={8}
-          value={passwordConfirm}
-          onInput={handlePasswordConfirmChange}
-          id="passwordConfirm"
-        />
-        {message && <div className={cx('form-error')}>{message}</div>}
-        <button
-          className={cx('submit-btn')}
-          type="submit"
-          disabled={isSubmitDisabled}
-          onClick={handleSignUp}
-        >
-          {t('signup')}
-        </button>
-        <div className={cx('form-main-text')}>{t('policyText')}</div>
-      </div>
-
-      <div className={cx('form-footer')}>
-        <span className={cx('form-footer-text')}>{t('haveAccountMessage')}</span>
-        <div className={cx('form-footer-link')} onClick={onLogInClick}>
-          {t('login')}
+    <div className={cx('form-container')}>
+      <form action="">
+        <div className={cx('form-main')}>
+          <h2 className={cx('form-title')}>{t('signup')}</h2>
+          <div className={cx('input-name')}>{t('email')}</div>
+          <input
+            className={cx('input-field')}
+            type="email"
+            placeholder={t('emailAddress')}
+            name="email"
+            required
+            value={email}
+            onInput={handleEmailChange}
+            id="email"
+          />
+          <div className={cx('input-name')}>{t('password')}</div>
+          <input
+            className={cx('input-field')}
+            type="password"
+            placeholder={t('password')}
+            name="password"
+            required
+            minLength={8}
+            value={password}
+            onInput={handlePasswordChange}
+            id="password"
+          />
+          <input
+            className={cx('input-field')}
+            type="password"
+            placeholder={t('passwordConfirm')}
+            name="passwordConfirm"
+            required
+            minLength={8}
+            value={passwordConfirm}
+            onInput={handlePasswordConfirmChange}
+            id="passwordConfirm"
+          />
+          {message && <div className={cx('form-error')}>{message}</div>}
+          <button
+            className={cx('submit-btn')}
+            type="submit"
+            disabled={isSubmitDisabled}
+            onClick={handleSignUp}
+          >
+            {t('signup')}
+          </button>
+          <div className={cx('form-main-text')}>{t('policyText')}</div>
         </div>
-      </div>
+        <div className={cx('form-footer')}>
+          <span className={cx('form-footer-text')}>{t('haveAccountMessage')}</span>
+          <div className={cx('form-footer-link')} onClick={onLogInClick}>
+            {t('login')}
+          </div>
+        </div>
+      </form>
     </div>
   );
 }

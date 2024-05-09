@@ -101,81 +101,81 @@ function ResetPasswordForm({ onSignUpClick }) {
   };
 
   return (
-    <div className={cx('form-container')} method="POST" autoComplete="off">
-      <div className={cx('form-main')}>
-        <h2 className={cx('form-title')}>{t('resetPassword')}</h2>
-        <div className={cx('input-name')}>{t('enterEmail')}</div>
-        <input
-          className={cx('input-field')}
-          type="email"
-          placeholder={t('emailAddress')}
-          name="email"
-          required
-          value={email}
-          onInput={handleEmailChange}
-          id="email"
-        />
-        {sendTokenMessage && <div className={cx('form-token-error')}>{sendTokenMessage}</div>}
-
-        <div className={cx('form-reset-token')}>
+    <div className={cx('form-container')}>
+      <form action="">
+        <div className={cx('form-main')}>
+          <h2 className={cx('form-title')}>{t('resetPassword')}</h2>
+          <div className={cx('input-name')}>{t('enterEmail')}</div>
           <input
             className={cx('input-field')}
-            type="text"
-            placeholder={t('enterResetToken')}
-            name="resetToken"
+            type="email"
+            placeholder={t('emailAddress')}
+            name="email"
             required
-            value={resetToken}
-            onInput={handleResetTokenChange}
-            id="resetToken"
-            style={{ paddingRight: '126px' }}
+            value={email}
+            onInput={handleEmailChange}
+            id="email"
           />
+          {sendTokenMessage && <div className={cx('form-token-error')}>{sendTokenMessage}</div>}
+          <div className={cx('form-reset-token')}>
+            <input
+              className={cx('input-field')}
+              type="text"
+              placeholder={t('enterResetToken')}
+              name="resetToken"
+              required
+              value={resetToken}
+              onInput={handleResetTokenChange}
+              id="resetToken"
+              style={{ paddingRight: '126px' }}
+            />
+            <button
+              className={cx('send-token-btn')}
+              onClick={handleSendResetToken}
+              disabled={isSendTokenDisabled}
+            >
+              {t('sendResetToken')}
+            </button>
+          </div>
+          <input
+            className={cx('input-field')}
+            type="password"
+            placeholder={t('password')}
+            name="password"
+            required
+            value={password}
+            onInput={handlePasswordChange}
+            id="password"
+            minLength={8}
+          />
+          <input
+            className={cx('input-field')}
+            type="password"
+            placeholder={t('passwordConfirm')}
+            name="passwordConfirm"
+            required
+            value={passwordConfirm}
+            onInput={handlePasswordConfirmChange}
+            id="passwordConfirm"
+            minLength={8}
+          />
+          {submitMessage && <div className={cx('form-submit-error')}>{submitMessage}</div>}
           <button
-            className={cx('send-token-btn')}
-            onClick={handleSendResetToken}
-            disabled={isSendTokenDisabled}
+            className={cx('submit-btn')}
+            type="submit"
+            disabled={isSubmitDisabled}
+            onClick={handleResetPassword}
           >
-            {t('sendResetToken')}
+            {t('resetPassword')}
           </button>
         </div>
-        <input
-          className={cx('input-field')}
-          type="password"
-          placeholder={t('password')}
-          name="password"
-          required
-          value={password}
-          onInput={handlePasswordChange}
-          id="password"
-          minLength={8}
-        />
-        <input
-          className={cx('input-field')}
-          type="password"
-          placeholder={t('passwordConfirm')}
-          name="passwordConfirm"
-          required
-          value={passwordConfirm}
-          onInput={handlePasswordConfirmChange}
-          id="passwordConfirm"
-          minLength={8}
-        />
-        {submitMessage && <div className={cx('form-submit-error')}>{submitMessage}</div>}
-        <button
-          className={cx('submit-btn')}
-          type="submit"
-          disabled={isSubmitDisabled}
-          onClick={handleResetPassword}
-        >
-          {t('resetPassword')}
-        </button>
-      </div>
-
-      <div className={cx('form-footer')}>
-        <span className={cx('form-footer-text')}>{t('noAccountMessage')}</span>
-        <div className={cx('form-footer-link')} onClick={onSignUpClick}>
-          {t('signup')}
+        <div className={cx('form-footer')}>
+          <span className={cx('form-footer-text')}>{t('noAccountMessage')}</span>
+          <div className={cx('form-footer-link')} onClick={onSignUpClick}>
+            {t('signup')}
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
