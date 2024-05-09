@@ -165,8 +165,11 @@ function VideoInfo({ video }) {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const fetchedComments = (await axios.get(`/api/v1/videos/${video._id}/comments/`)).data.data
-          .documents;
+        const fetchedComments = (
+          await axios.get(
+            `${process.env.REACT_APP_BACKEND_URL}/api/v1/videos/${video._id}/comments/`,
+          )
+        ).data.data.documents;
         setComments(fetchedComments);
         setIsLoading(false);
       } catch (err) {
