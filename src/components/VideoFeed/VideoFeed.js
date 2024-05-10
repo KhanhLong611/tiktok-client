@@ -16,7 +16,7 @@ function VideoFeed({ type }) {
   const [page, setPage] = useState(1);
   const [videos, setVideos] = useState(null);
   const [isMore, setIsMore] = useState(true);
-  const [fetchNew, setFetchNew] = useState();
+  const [fetchNew, setFetchNew] = useState(true);
   const [currentPosition, setCurrentPosition] = useState(0);
 
   const location = useLocation();
