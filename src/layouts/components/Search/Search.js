@@ -58,6 +58,7 @@ function Search({ border, transparent }) {
 
       const result = await axios.get(
         `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/search?q=${debouncedValue}`,
+        { withCredentials: true },
       );
 
       const users = result.data.data.users;

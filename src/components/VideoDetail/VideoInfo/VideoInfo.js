@@ -55,10 +55,14 @@ function VideoInfo({ video }) {
     if (currentUser) {
       if (!video.likes.includes(currentUser._id)) {
         dispatch(likeClick(currentUser._id));
-        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/like/${video._id}`);
+        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/like/${video._id}`, {
+          withCredentials: true,
+        });
       } else {
         dispatch(likeClick(currentUser._id));
-        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unlike/${video._id}`);
+        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unlike/${video._id}`, {
+          withCredentials: true,
+        });
       }
     } else {
       alert('Please log in to like this video!');
@@ -71,11 +75,13 @@ function VideoInfo({ video }) {
         dispatch(favoriteClick(currentUser._id));
         await axios.patch(
           `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/favorite/${video._id}`,
+          { withCredentials: true },
         );
       } else {
         dispatch(favoriteClick(currentUser._id));
         await axios.patch(
           `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/notfavorite/${video._id}`,
+          { withCredentials: true },
         );
       }
     } else {
@@ -88,6 +94,8 @@ function VideoInfo({ video }) {
       if (currentUser.following.includes(video.user._id)) {
         await axios.patch(
           `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unfollow/${video.user._id}`,
+          { withCredentials: true },
+          { withCredentials: true },
         );
         dispatch(followClick([video.user._id, currentUser._id]));
       } else {
@@ -168,6 +176,7 @@ function VideoInfo({ video }) {
         const fetchedComments = (
           await axios.get(
             `${process.env.REACT_APP_BACKEND_URL}/api/v1/videos/${video._id}/comments/`,
+            { withCredentials: true },
           )
         ).data.data.documents;
         setComments(fetchedComments);

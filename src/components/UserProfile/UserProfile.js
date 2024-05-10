@@ -47,7 +47,9 @@ function UserProfile() {
 
   const followUser = async () => {
     setIsFollowing(true);
-    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/follow/${id}`);
+    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/follow/${id}`, {
+      withCredentials: true,
+    });
     dispatch(followClick([id]));
   };
 
@@ -83,8 +85,11 @@ function UserProfile() {
 
   useEffect(() => {
     const getUserData = async () => {
-      const user = (await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/find/${id}`))
-        .data.data.document;
+      const user = (
+        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/find/${id}`, {
+          withCredentials: true,
+        })
+      ).data.data.document;
       setUser(user);
     };
     getUserData();

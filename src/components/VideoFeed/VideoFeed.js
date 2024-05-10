@@ -33,11 +33,15 @@ function VideoFeed({ type }) {
     let moreVideos;
     if (type === 'random') {
       moreVideos = (
-        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/random?page=${page + 1}`)
+        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/random?page=${page + 1}`, {
+          withCredentials: true,
+        })
       ).data.data?.videos;
     } else if (type === 'following') {
       moreVideos = (
-        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/following?page=${page + 1}`)
+        await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/following?page=${page + 1}`, {
+          withCredentials: true,
+        })
       ).data.data?.videos;
     }
     if (moreVideos && moreVideos.length > 0) {
@@ -102,11 +106,15 @@ function VideoFeed({ type }) {
       // Fetch random or following videos based on the query parameter
       if (type === 'random') {
         fetchedVideos = (
-          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/random?new=${fetchNew}`)
+          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/random?new=${fetchNew}`, {
+            withCredentials: true,
+          })
         ).data.data.videos;
       } else if (type === 'following' && currentUser) {
         fetchedVideos = (
-          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/following?page=1`)
+          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/following?page=1`, {
+            withCredentials: true,
+          })
         ).data.data.videos;
       }
       if (!ignore && fetchedVideos?.length > 0) {

@@ -30,6 +30,7 @@ function Comment({ data, comments, setComments }) {
       if (window.confirm('Are you sure you want to delete this comment?')) {
         const res = await axios.delete(
           `${process.env.REACT_APP_BACKEND_URL}/api/v1/comments/${data._id}`,
+          { withCredentials: true },
         );
 
         if (res.status === 200) {

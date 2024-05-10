@@ -29,7 +29,9 @@ function VideoDetail() {
     const fetchVideo = async () => {
       try {
         const video = (
-          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/videos/find/${videoId}`)
+          await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/v1/videos/find/${videoId}`, {
+            withCredentials: true,
+          })
         ).data.data.document;
         if (!ignore) {
           dispatch(fetchSuccess(video));

@@ -20,6 +20,7 @@ function CreatorVideos({ video }) {
         const fetchedVideos = (
           await axios.get(
             `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/${video.user.id}/videos/?page=1&limit=5`,
+            { withCredentials: true },
           )
         ).data.data.videos;
         setUserVideos(fetchedVideos);

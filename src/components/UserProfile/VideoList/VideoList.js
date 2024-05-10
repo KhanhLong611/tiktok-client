@@ -54,7 +54,7 @@ function VideoList({ user, isActive, handleMenuItemClick }) {
       }
     }
 
-    moreVideos = (await axios.get(URL)).data.data?.videos;
+    moreVideos = (await axios.get(URL, { withCredentials: true })).data.data?.videos;
 
     if (moreVideos && moreVideos.length > 0) {
       setVideos([...videos, ...moreVideos]);
@@ -94,7 +94,7 @@ function VideoList({ user, isActive, handleMenuItemClick }) {
     const fetchVideos = async () => {
       try {
         setIsLoading(true);
-        const { data } = await axios.get(URL);
+        const { data } = await axios.get(URL, { withCredentials: true });
         let videos = data.data.videos;
         if (videos && videos.length > 0) {
           if (ignore) {

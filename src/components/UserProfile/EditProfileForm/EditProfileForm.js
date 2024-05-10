@@ -111,6 +111,7 @@ function EditProfileForm({ closeEditProfileForm }) {
       const res = await axios.patch(
         `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/updateMe`,
         updateData,
+        { withCredentials: true },
       );
 
       const user = res.data.data.user;
@@ -182,6 +183,7 @@ function EditProfileForm({ closeEditProfileForm }) {
               }/api/v1/users/checkNicknameDuplicate?nickname=${encodeURIComponent(
                 trimmedNickname,
               )}`,
+              { withCredentials: true },
             );
             const data = response.data;
 
