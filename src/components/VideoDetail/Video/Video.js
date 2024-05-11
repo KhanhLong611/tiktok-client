@@ -31,7 +31,7 @@ function Video({ video, scrollState, from }) {
       navigate(`/?new=false`, { state: { scrollPosition: scrollState } });
     } else if (from === '/following') {
       navigate(`/following`, { state: { scrollPosition: scrollState } });
-    } else if (from.startsWith('/profile')) {
+    } else if (from?.startsWith('/profile')) {
       navigate(`${from}/?active=${location.state.active}`);
     } else if (from === '/explore') {
       navigate(`/explore?active=${location.state.active}`);
