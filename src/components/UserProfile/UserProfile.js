@@ -47,15 +47,25 @@ function UserProfile() {
 
   const followUser = async () => {
     setIsFollowing(true);
-    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/follow/${id}`, {
-      withCredentials: true,
-    });
+    await axios.patch(
+      `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/follow/${id}`,
+      {},
+      {
+        withCredentials: true,
+      },
+    );
     dispatch(followClick([id]));
   };
 
   const unfollowUser = async () => {
     setIsFollowing(false);
-    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}users/unfollow/${id}`);
+    await axios.patch(
+      `${process.env.REACT_APP_BACKEND_URL}users/unfollow/${id}`,
+      {},
+      {
+        withCredentials: true,
+      },
+    );
     dispatch(followClick([id]));
   };
 

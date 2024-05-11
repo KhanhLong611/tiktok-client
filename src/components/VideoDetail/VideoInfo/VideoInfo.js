@@ -55,14 +55,22 @@ function VideoInfo({ video }) {
     if (currentUser) {
       if (!video.likes.includes(currentUser._id)) {
         dispatch(likeClick(currentUser._id));
-        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/like/${video._id}`, {
-          withCredentials: true,
-        });
+        await axios.patch(
+          `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/like/${video._id}`,
+          {},
+          {
+            withCredentials: true,
+          },
+        );
       } else {
         dispatch(likeClick(currentUser._id));
-        await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unlike/${video._id}`, {
-          withCredentials: true,
-        });
+        await axios.patch(
+          `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unlike/${video._id}`,
+          {},
+          {
+            withCredentials: true,
+          },
+        );
       }
     } else {
       alert('Please log in to like this video!');
@@ -75,12 +83,14 @@ function VideoInfo({ video }) {
         dispatch(favoriteClick(currentUser._id));
         await axios.patch(
           `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/favorite/${video._id}`,
+          {},
           { withCredentials: true },
         );
       } else {
         dispatch(favoriteClick(currentUser._id));
         await axios.patch(
           `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/notfavorite/${video._id}`,
+          {},
           { withCredentials: true },
         );
       }
@@ -94,13 +104,15 @@ function VideoInfo({ video }) {
       if (currentUser.following.includes(video.user._id)) {
         await axios.patch(
           `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unfollow/${video.user._id}`,
-          { withCredentials: true },
+          {},
           { withCredentials: true },
         );
         dispatch(followClick([video.user._id, currentUser._id]));
       } else {
         await axios.patch(
           `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/follow/${video.user._id}`,
+          {},
+          { withCredentials: true },
         );
         dispatch(followClick([video.user._id, currentUser._id]));
       }

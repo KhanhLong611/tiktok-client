@@ -43,6 +43,7 @@ function Video({ video, scrollState, from }) {
     setIsFollowed(true);
     await axios.patch(
       `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/follow/${video.user._id}`,
+      {},
       { withCredentials: true },
     );
     dispatch(followClick([video.user._id]));
@@ -52,6 +53,7 @@ function Video({ video, scrollState, from }) {
     setIsFollowed(false);
     await axios.patch(
       `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unfollow/${video.user._id}`,
+      {},
       { withCredentials: true },
     );
     dispatch(followClick([video.user._id]));
@@ -60,25 +62,37 @@ function Video({ video, scrollState, from }) {
   const likeVideo = async () => {
     setIsLiked(true);
     setNumLikes(numLikes + 1);
-    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/like/${video._id}`, {
-      withCredentials: true,
-    });
+    await axios.patch(
+      `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/like/${video._id}`,
+      {},
+      {
+        withCredentials: true,
+      },
+    );
   };
 
   const unlikeVideo = async () => {
     setIsLiked(false);
     setNumLikes(numLikes - 1);
-    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unlike/${video._id}`, {
-      withCredentials: true,
-    });
+    await axios.patch(
+      `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/unlike/${video._id}`,
+      {},
+      {
+        withCredentials: true,
+      },
+    );
   };
 
   const favoriteVideo = async () => {
     setIsFavorite(true);
     setNumFavorites(numFavorites + 1);
-    await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/v1/users/favorite/${video._id}`, {
-      withCredentials: true,
-    });
+    await axios.patch(
+      `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/favorite/${video._id}`,
+      {},
+      {
+        withCredentials: true,
+      },
+    );
   };
 
   const notfavoriteVideo = async () => {
@@ -86,6 +100,7 @@ function Video({ video, scrollState, from }) {
     setNumFavorites(numFavorites - 1);
     await axios.patch(
       `${process.env.REACT_APP_BACKEND_URL}/api/v1/users/notfavorite/${video._id}`,
+      {},
       { withCredentials: true },
     );
   };
