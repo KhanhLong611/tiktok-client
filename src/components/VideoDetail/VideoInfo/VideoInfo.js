@@ -146,6 +146,7 @@ function VideoInfo({ video }) {
         {
           content: commentContent,
         },
+        { withCredentials: true },
       );
       const comment = res.data.data.document;
       setComments([comment, ...comments]);
