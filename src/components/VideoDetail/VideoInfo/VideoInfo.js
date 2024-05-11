@@ -142,7 +142,7 @@ function VideoInfo({ video }) {
     const commentContent = commentInputRef.current.value.trim();
     if (commentContent !== '') {
       const res = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/videos/${video._id}/comments`,
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/videos/${video._id}/comments`,
         {
           content: commentContent,
         },
