@@ -35,6 +35,8 @@ function Video({ video, scrollState, from }) {
       navigate(`${from}/?active=${location.state.active}`);
     } else if (from === '/explore') {
       navigate(`/explore?active=${location.state.active}`);
+    } else {
+      navigate('/');
     }
   };
 
