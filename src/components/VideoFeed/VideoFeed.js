@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import axios from 'axios';
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -16,7 +16,7 @@ function VideoFeed({ type }) {
   const [page, setPage] = useState(1);
   const [videos, setVideos] = useState(null);
   const [isMore, setIsMore] = useState(true);
-  const [fetchNew, setFetchNew] = useState(true);
+  const [fetchNew, setFetchNew] = useState(false);
   const [currentPosition, setCurrentPosition] = useState(0);
 
   const location = useLocation();
@@ -57,7 +57,7 @@ function VideoFeed({ type }) {
   }, [currentUser]);
 
   // Set scroll position when back from video browser page
-  useLayoutEffect(() => {
+  useEffect(() => {
     const wrapper = wrapperRef.current;
 
     // Must have videos (videos === truthy) before scrolling to the previous position
@@ -90,7 +90,7 @@ function VideoFeed({ type }) {
   // Set fetchNew base on query parameter for the below fetch videos effect
   useEffect(() => {
     if (searchParams.get('new') === 'false') {
-      setFetchNew(searchParams.get('new'));
+      setFetchNew(false);
     } else {
       setFetchNew(true);
     }
