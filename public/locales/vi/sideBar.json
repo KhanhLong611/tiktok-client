@@ -9,6 +9,7 @@
     "label": {
       "following": "Tài khoản đang theo dõi"
     },
+    "notLoginMessage": "Đăng nhập để theo dõi nhà sáng tạo khác, thích video và xem bình luận.",
     "noFollowingMessage": "Bạn chưa theo dõi ai. Hãy theo dõi người khác để thấy tài khoản của họ."
   },
   "footer": {

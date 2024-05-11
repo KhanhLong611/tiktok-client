@@ -9,6 +9,7 @@
     "label": {
       "following": "Following accounts"
     },
+    "notLoginMessage": "Log in to follow creators, like videos, and view comments.",
     "noFollowingMessage": "You haven't followed anyone. Follow other users to see their accounts."
   },
   "footer": {
